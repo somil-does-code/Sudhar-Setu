@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Issue Details - Public Hygiene</title> 
+  <link rel="stylesheet" href="style.css" /> 
+  <script src="script.js" defer></script> 
+</head> 
+<body> 
+  <header> 
+    <div id="user-greeting"></div> 
+    <button onclick="logout()">Logout</button> 
+  </header> 
+ 
+  <div id="issue-details-container"> 
+    <h2 id="issue-title">Issue Details</h2> 
+    <form id="issue-details-form"> 
+      <label for="area">Area Affected:</label> 
+      <input type="text" id="area" name="area" required /> 
+ 
+      <label for="photos">Upload Photos:</label> 
+      <input type="file" id="photos" name="photos" multiple /> 
+ 
+      <label for="more-details">Additional Details:</label> 
+      <textarea id="more-details" name="more-details" required></textarea> 
+ 
+      <button type="submit">Submit Details</button> 
+    </form> 
+  </div> 
+</body> 
+</html> 
