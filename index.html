@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Hygiene Matters</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    /* Color palette */
+    :root {
+      --light-peach: #cb997e;
+      --walnut-brown: #5e503f;
+      --light-yellow: #ffe8d6;
+      --soft-brown: #b7b7a4;
+      --grayish-green: #a5a58d;
+      --dark-green: #6b705c;
+    }
+
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-yellow);
+      color: var(--dark-green);
+    }
+
+    /* Header and Navigation */
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--dark-green);
+      color: white;
+    }
+
+    header .logo img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-top: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section Styles */
+    #hero {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      background-color: var(--walnut-brown);
+      border-radius: 8px;
+      margin: 20px;
+      max-width: 1200px;
+    }
+
+    #hero .content {
+      max-width: 50%;
+    }
+
+    #hero .content p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    #hero .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--light-peach);
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+    }
+
+    #hero .cta-button:hover {
+      background-color: var(--grayish-green);
+    }
+
+    #hero .image-container img {
+      height: 264px;
+      border-radius: 8px;
+      width:470px;
+    }
+
+    /* Submit Issue Section Styles */
+    #submit-issue {
+      background-color: var(--soft-brown);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    #submit-issue h2 {
+      font-size: 2em;
+    }
+
+    #login-message {
+      color: red;
+      font-weight: bold;
+    }
+
+    #submit-issue form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #submit-issue label {
+      margin: 10px 0;
+    }
+
+    #submit-issue button {
+      padding: 10px;
+      background-color: var(--dark-green);
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #submit-issue button:hover {
+      background-color: var(--grayish-green);
+    }
+
+    /* Hygiene Issues Section Styles */
+    #hygiene-issues {
+      margin-top: 40px;
+    }
+
+    #issues-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .issue-card {
+      background-color: var(--light-peach);
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      flex-basis: 22%;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .issue-card:hover {
+      background-color: var(--walnut-brown);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img
+        src="https://i.postimg.cc/XJBrR1qz/circular-logo.png"
+        alt="Your Logo"
+        onclick="logout()"
+      />
+    </div>
+    <h1 class="title">"Public Hygiene Matters"</h1>
+    <nav>
+      <ul>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="content">
+      <p>
+        We address public hygiene issues in India by taking reports from
+        citizens and working on solutions. Join us in creating a cleaner and
+        healthier surrounding around us.
+      </p>
+      <a href="login.html" id="get-started-button" class="cta-button">Get Started</a>
+      <span id="user-greeting" style="display: none"></span>
+    </div>
+    <div class="image-container">
+      <img
+        id="carousel-image" height="470" width="314"
+        src="https://i.postimg.cc/0jxFbrSp/BANGALORE-super-Jumbo.jpg" 
+        alt="Public Hygiene Issue" 
+      /> 
+    </div> 
+  </section> 
+ 
+  <section id="submit-issue"> 
+    <h2>Report Public Hygiene Issue</h2> 
+    <div id="login-message" style="display: none;"> 
+      Please log in to access the issue submission form. 
+    </div> 
+    <form id="issue-form" style="display: none;"> 
+      <label for="issue-type">Select Issue Type:</label> 
+      <select id="issue-type" name="issue-type"> 
+        <option value="food">Unhygienic Food</option> 
+        <option value="trash">Trash on Roads</option> 
+        <option value="water">Water Pollution</option> 
+        <option value="open-defecation">Open Defecation</option> 
+      </select> 
+ 
+      <label for="issue-description">Description of the Issue:</label> 
+      <textarea id="issue-description" name="issue-description" required></textarea> 
+ 
+      <label for="issue-photos">Upload Photos:</label> 
+      <input type="file" id="issue-photos" name="issue-photos" multiple /> 
+ 
+      <button type="submit">Submit Issue</button> 
+    </form> 
+  </section> 
+</body> 
+</html> 
