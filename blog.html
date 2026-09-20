@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        /* Color palette */
+        :root {
+            --light-peach: #cb997e;
+            --peach: #ddbea9;
+            --light-yellow: #ffe8d6;
+            --soft-brown: #b7b7a4;
+            --grayish-green: #a5a58d;
+            --dark-green: #6b705c;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: var(--light-yellow);
+            color: var(--dark-green);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background-color: var(--peach);
+            padding: 20px;
+            border-radius: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--light-peach);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--dark-green);
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Additional Styles for Links */
+        a {
+            color: var(--grayish-green);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--dark-green);
+            text-decoration: underline;
+        }
+
+        /* Style for Blog link at the top */
+        .blog-link {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        // JavaScript to ensure the link opens in the same tab
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogLink = document.querySelector('.blog-link');
+            blogLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default behavior
+                window.location.href = 'blog.html'; // Redirect to blog.html in the same tab
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Blog link at the top -->
+    <a href="blog.html" class="blog-link">Blog</a>
+
+    <div class="content">
+        <h1>India's Progress in WASH Initiatives</h1>
+        <p>India has made impressive progress in improving water, sanitation, and hygiene (WASH), notably by reducing open defecation. In 2015, around 568 million people lacked access to toilets, leading to widespread open defecation and serious health impacts. The Swachh Bharat Mission (SBM), a government-led initiative, partnered with UNICEF to address this issue, reducing the number of people defecating in the open by 450 million by 2019. This is a significant achievement, but ensuring sustained toilet use and hygienic practices remains essential.</p>
+        <p>Poor sanitation and hygiene increase risks of diarrheal diseases, which particularly impact children and contribute to high child mortality rates. Illnesses from unsafe WASH practices also hinder economic growth, as they reduce productivity and affect workforce health. In health facilities, inadequate WASH services contribute to neonatal mortality (24 deaths per 1,000 live births) and are a factor in maternal mortality, as sepsis can spread in environments lacking proper sanitation.</p>
+        <p>Water safety is another critical concern. Chemical contamination from fluoride and arsenic affects nearly 2 million homes, while only about half of the population has access to safely managed drinking water. Water scarcity also impacts two-thirds of India’s districts, posing a major challenge to WASH improvements.</p>
+        <p>UNICEF collaborates closely with the Government of India to sustain and expand WASH efforts through key initiatives, including the Swachh Bharat Mission, Jal Jeevan Mission, and WASH in Schools programs. Extending beyond rural areas, UNICEF’s programs now target urban areas where sanitation gaps persist, particularly among the urban poor. By supporting health facilities, schools, and vulnerable districts, UNICEF’s WASH programs are positioned to improve hygiene, reduce preventable diseases, and enhance child survival, growth, and educational outcomes. Through partnerships and behavior change campaigns, these programs aim to create lasting, sustainable WASH practices across India.</p>
+        <img src="https://i.postimg.cc/Gt9q19n2/1590937212.jpg" alt="WASH Initiative Image"> 
+    </div> 
+</body> 
+</html> 
