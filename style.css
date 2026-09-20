@@ -1,0 +1,280 @@
+/* Color Palette */ 
+:root { 
+    --light-peach: #cb997e; 
+    --peachy-cream: #ddbea9; 
+    --light-yellow: #ffe8d6; 
+    --soft-brown: #b7b7a4; 
+    --grayish-green: #a5a58d; 
+    --dark-green: #6b705c; 
+} 
+ 
+/* General Styles */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+} 
+ 
+body { 
+    background-color: var(--light-yellow); 
+    color: var(--dark-green); 
+    justify-content: center; 
+} 
+ 
+/* Header Styles */ 
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 5%; 
+    background-color: #333; 
+    color: white; 
+} 
+ 
+header .logo { 
+    width: 100px !important; 
+    height: auto !important; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: var(--dark-green); 
+} 
+ 
+header nav a { 
+    margin-left: 20px; 
+    text-decoration: none; 
+    color: var(--dark-green); 
+    font-weight: bold; 
+} 
+ 
+header button { 
+    background-color: var(--light-peach); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+} 
+ 
+header button:hover { 
+    background-color: #e53935; 
+} 
+ 
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+} 
+ 
+/* Hero Section Styles */ 
+#hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5% 10%; 
+    background-color: var(--peachy-cream); 
+    border-radius: 10px; 
+    margin: 2rem auto; 
+    max-width: 1200px; 
+} 
+ 
+#hero .content { 
+    max-width: 50%; 
+} 
+ 
+#hero h1 { 
+    font-size: 2.5rem; 
+    color: var(--dark-green); 
+} 
+ 
+#hero p { 
+    font-size: 1.5rem; 
+    margin: 1rem 0; 
+    color: var(--soft-brown); 
+} 
+ 
+.cta-button { 
+    display: inline-block; 
+    padding: 0.75rem 1.5rem; 
+    background-color: var(--light-peach); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    transition: background 0.3s ease; 
+} 
+ 
+.cta-button:hover { 
+    background-color: var(--grayish-green); 
+} 
+ 
+.image-container { 
+    max-width: 45%; 
+    display: flex; 
+    justify-content: center; 
+    overflow: hidden; 
+    position: relative; 
+    border-radius: 10px; 
+} 
+ 
+.image-container img { 
+    width: 100%; 
+    border-radius: 10px; 
+    object-fit: cover; 
+    transition: opacity 1s ease-in-out; 
+} 
+ 
+/* Carousel Section */ 
+#carousel-container { 
+    width: 100%; 
+    overflow: hidden; 
+    text-align: center; 
+} 
+ 
+#carousel-image { 
+    max-width: 100%; 
+    height: auto; 
+} 
+ 
+/* Login Container Styles */ 
+.login-container { 
+    width: 300px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border: 1px solid var(--soft-brown); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: var(--light-yellow); 
+} 
+ 
+.login-container h2 { 
+    text-align: center; 
+    color: var(--dark-green); 
+} 
+ 
+.form-group { 
+    margin-bottom: 15px; 
+} 
+ 
+.form-group label { 
+    display: block; 
+    font-weight: bold; 
+    color: var(--dark-green); 
+} 
+ 
+.form-group input { 
+    width: 100%; 
+    padding: 8px; 
+    box-sizing: border-box; 
+    border: 1px solid var(--soft-brown); 
+    border-radius: 4px; 
+} 
+ 
+.toggle-password { 
+    cursor: pointer; 
+    margin-left: 10px; 
+    color: var(--grayish-green); 
+} 
+ 
+.forgot-password { 
+    display: inline-block; 
+    margin-top: 5px; 
+    font-size: 0.9em; 
+    text-decoration: none; 
+    color: var(--light-peach); 
+} 
+ 
+.forgot-password:hover { 
+    text-decoration: underline; 
+} 
+ 
+.login-button { 
+    width: 100%; 
+    padding: 10px; 
+    background-color: var(--dark-green); 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+} 
+ 
+.login-button:hover { 
+    background-color: var(--grayish-green); 
+} 
+ 
+/* Additional Styles for Sign-Up Prompt */ 
+.form-group p { 
+    text-align: center; 
+    color: var(--grayish-green); 
+} 
+ 
+.form-group p a { 
+    color: var(--light-peach); 
+    text-decoration: none; 
+} 
+ 
+.form-group p a:hover { 
+    text-decoration: underline; 
+} 
+ 
+/* Issue Submission Section */ 
+#submit-issue { 
+    padding: 20px; 
+    margin: 20px; 
+    border: 1px solid #ddd; 
+    background-color: #f9f9f9; 
+} 
+ 
+#submit-issue form { 
+    display: flex; 
+    flex-direction: column; 
+} 
+ 
+#submit-issue label { 
+    margin-top: 10px; 
+} 
+ 
+#submit-issue input, #submit-issue textarea { 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+} 
+ 
+#submit-issue button { 
+    padding: 10px 20px; 
+    background-color: #4caf50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+} 
+ 
+#submit-issue button:hover { 
+    background-color: #45a049; 
+} 
+ 
+/* Hygiene Issues Display Section */ 
+#hygiene-issues { 
+    padding: 20px; 
+    margin: 20px; 
+    background-color: #e0e0e0; 
+} 
+ 
+#issues-list { 
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+} 
+ 
+.issue-card { 
+    background-color: var(--light-peach); 
+    color: white; 
+    padding: 20px; 
+    margin: 10px; 
+    width: 200px; 
+    text-align: center; 
+    cursor: pointer; 
+} 
+ 
+.issue-card:hover { 
+    background-color: var(--grayish-green); 
+} this is 
